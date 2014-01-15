@@ -4,16 +4,16 @@ import java.util.Date;
 //private    only current class+package
 //protected  current class,subclass,package
 //public     anywhere in java
-public class lonelyTweetModel {
-    private String text;
-    private Date timestamp;
+public abstract class lonelyTweetModel {
+    protected String text;
+    protected Date timestamp;
 	// getters and setters
     public String getText() {
 		return text;
 	}
-	public void setText(String text) {
-		this.text = text;
-	}
+    
+	public abstract void setText(String text);
+	
 	public Date getTimestamp() {
 		return timestamp;
 	}
