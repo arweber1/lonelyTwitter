@@ -4,7 +4,7 @@ import java.util.Date;
 //private    only current class+package
 //protected  current class,subclass,package
 //public     anywhere in java
-public abstract class lonelyTweetModel {
+public abstract class LonelyTweetModel {
     protected String text;
     protected Date timestamp;
 	// getters and setters
@@ -21,13 +21,13 @@ public abstract class lonelyTweetModel {
 		this.timestamp = timestamp;
 	}
 	// constructor
-	public lonelyTweetModel(String text, Date timestamp) {
+	public LonelyTweetModel(String text, Date timestamp) {
 		super();
 		this.text = text;
 		this.timestamp = timestamp;
 	}
 	// second
-	public lonelyTweetModel(String text) {
+	public LonelyTweetModel(String text) {
 		super();
 		this.text = text;
 		this.timestamp = new Date();

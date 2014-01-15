@@ -1,8 +1,8 @@
 package ca.ualberta.cs.lonelytwitter;
 
-public class normalTweetModel extends lonelyTweetModel{
+public class NormalTweetModel extends LonelyTweetModel{
 
-	public normalTweetModel(String text) {
+	public NormalTweetModel(String text) {
 		super(text);
 		// TODO Auto-generated constructor stub
 	}
