@@ -20,6 +20,18 @@ public class lonelyTweetModel {
 	public void setTimestamp(Date timestamp) {
 		this.timestamp = timestamp;
 	}
+	// constructor
+	public lonelyTweetModel(String text, Date timestamp) {
+		super();
+		this.text = text;
+		this.timestamp = timestamp;
+	}
+	// second
+	public lonelyTweetModel(String text) {
+		super();
+		this.text = text;
+		this.timestamp = new Date();
+	}
     
 	
 }
