@@ -12,6 +12,15 @@ public class normalTweetModel extends lonelyTweetModel{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public String check() {
+		// TODO Auto-generated method stub
+		
+		   String name = "normalTweetModel";
+		return name;
+		
+	}
     
 	
 }

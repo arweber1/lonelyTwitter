@@ -32,6 +32,7 @@ public abstract class lonelyTweetModel {
 		this.text = text;
 		this.timestamp = new Date();
 	}
+	public abstract String check();
     
 	
 }

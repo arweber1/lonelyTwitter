@@ -17,4 +17,12 @@ public class importantTweetModel extends lonelyTweetModel {
 	public void setText(String text) {
 		this.text = text;
 	}
+
+	@Override
+	public String check() {
+		// TODO Auto-generated method stub
+		String name ="importantTweetModel"; 
+		return name;
+		
+	}
 }
