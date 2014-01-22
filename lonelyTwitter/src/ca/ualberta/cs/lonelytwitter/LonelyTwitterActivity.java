@@ -58,36 +58,7 @@ public class LonelyTwitterActivity extends Activity {
 		}
 			
 		
-/*
- * try {
-            FileInputStream fis = openFileInput(FILENAME);
-			
-			BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-			String line = in.readLine();
-			NormalTweetModel son;
-			
-			Gson gson = new Gson();
-			son = gson.fromJson(line, NormalTweetModel.class);
-			 tweets2.add(son.text+"\n"+son.timestamp.toString());
-			 System.out.println(son.text+"aaaaaaaaaaaa");
-			while (line != null) {
-				
-				line = in.readLine();
-					
-				 son = gson.fromJson(line, NormalTweetModel.class);
-				 
-				 tweets2.add(son.text+"\n"+son.timestamp.toString());
-				 System.out.println("aaaaaaaaaaaaa");
-				}
 
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/  
- 
 		bodyText = (EditText) findViewById(R.id.body);
 		Button saveButton = (Button) findViewById(R.id.save);
 		oldTweetsList = (ListView) findViewById(R.id.oldTweetsList);
