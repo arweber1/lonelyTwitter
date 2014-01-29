@@ -1,0 +1,138 @@
+diff --git a/.classpath b/.classpath
+index d57ec02..5176974 100644
+--- a/.classpath
++++ b/.classpath
+@@ -2,8 +2,8 @@
+ <classpath>
+ 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+ 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
++	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+ 	<classpathentry kind="src" path="src"/>
+ 	<classpathentry kind="src" path="gen"/>
+-	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+ 	<classpathentry kind="output" path="bin/classes"/>
+ </classpath>
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 88dca04..271f52e 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -4,7 +4,7 @@
+     android:versionCode="1"
+     android:versionName="1.0" >
+ 
+-    <uses-sdk android:minSdkVersion="7" />
++    <uses-sdk android:minSdkVersion="11" />
+ 
+     <application
+         android:icon="@drawable/ic_launcher"
+diff --git a/README.md b/README.md
+index 6a315d0..2a12a87 100644
+--- a/README.md
++++ b/README.md
+@@ -2,3 +2,5 @@ lonelyTwitter
+ =============
+ 
+ Lonely Twitter demo for CSCI 301
++
++This code is only for demonstrating Eclipse, Android and jUnit development.
+diff --git a/res/layout/main.xml b/res/layout/main.xml
+index f10e6ff..c2eec36 100644
+--- a/res/layout/main.xml
++++ b/res/layout/main.xml
+@@ -1,40 +1,46 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:layout_width="fill_parent"
+-    android:layout_height="fill_parent"
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="fill_parent"
++    android:layout_height="fill_parent"
+     android:orientation="vertical" >
+-
+-    <TextView
+-        android:id="@+id/oldTweetsTitle"
+-        android:layout_width="fill_parent"
+-        android:layout_height="wrap_content"
++
++    <TextView
++        android:id="@+id/oldTweetsTitle"
++        android:layout_width="fill_parent"
++        android:layout_height="wrap_content"
+         android:text="My old tweets" />
+-
+-    <ListView
+-        android:id="@+id/oldTweetsList"
+-        android:layout_width="fill_parent"
+-        android:layout_height="wrap_content" 
+-        android:scrollbars="vertical">
+-    </ListView>
+-
+-    <TextView
+-        android:id="@+id/hello"
+-        android:layout_width="fill_parent"
+-        android:layout_height="wrap_content"
+-        android:text="@string/hello" />
+-    
+-    <EditText
+-        xmlns:android="http://schemas.android.com/apk/res/android"
+-        android:id="@+id/body"
+-        android:layout_width="fill_parent"
+-        android:layout_height="fill_parent"
+-        android:layout_weight="1"
++
++    <ListView
++        android:id="@+id/oldTweetsList"
++        android:layout_width="fill_parent"
++        android:layout_height="263dp"
++        android:layout_weight="1"
++        android:scrollbars="vertical" >
++
++    </ListView>
++
++    <TextView
++        android:id="@+id/hello"
++        android:layout_width="fill_parent"
++        android:layout_height="wrap_content"
++        android:text="@string/hello" />
++    
++    <EditText
++        android:id="@+id/body"
++        android:layout_width="fill_parent"
++        android:layout_height="wrap_content"
+         android:scrollbars="horizontal" />
+-
+-    <Button
+-        android:id="@+id/save"
+-        android:layout_width="fill_parent"
+-        android:layout_height="wrap_content"
+-        android:text="@string/save" />
+-
++
++    <Button
++        android:id="@+id/clear"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="@string/clear" />
++
++    <Button
++        android:id="@+id/save"
++        android:layout_width="fill_parent"
++        android:layout_height="wrap_content"
++        android:text="@string/save" />
++
+ </LinearLayout>
+\ No newline at end of file
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index ed467bd..919a1e2 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -4,5 +4,6 @@
+     <string name="hello">Joshua said:</string>
+     <string name="app_name">LonelyTwitter</string>
+     <string name="save">Save</string>
+-
++    <string name="clear">Clear</string>
++    
+ </resources>
+\ No newline at end of file

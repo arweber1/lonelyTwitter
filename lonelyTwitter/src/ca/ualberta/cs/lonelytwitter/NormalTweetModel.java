@@ -1,5 +1,6 @@
 package ca.ualberta.cs.lonelytwitter;
 
+
 import java.util.Date;
 
 public class NormalTweetModel extends LonelyTweetModel {
@@ -22,4 +23,4 @@ public class NormalTweetModel extends LonelyTweetModel {
 		return super.equals(other) && (other instanceof NormalTweetModel);
 	}
 
-}
+

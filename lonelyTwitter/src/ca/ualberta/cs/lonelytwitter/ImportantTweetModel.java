@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class ImportantTweetModel extends LonelyTweetModel {
 
-	
-	
-	
+
 	public ImportantTweetModel(String text, Date timestamp) {
 		super(text, timestamp);
-	}
+		// TODO Auto-generated constructor stub
+
 
 	public ImportantTweetModel(String text) {
 		super(text);
+
 	}
 	
 	public String getText() {
@@ -29,5 +29,4 @@ public class ImportantTweetModel extends LonelyTweetModel {
 		return super.equals(other) && (other instanceof ImportantTweetModel);
 	}
 
-	
-}
+
