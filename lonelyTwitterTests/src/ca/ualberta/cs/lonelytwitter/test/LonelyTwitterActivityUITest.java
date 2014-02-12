@@ -1,13 +1,16 @@
 package ca.ualberta.cs.lonelytwitter.test;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Instrumentation;
+import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.ViewAsserts;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import ca.ualberta.cs.lonelytwitter.IntentReaderActivity;
 import ca.ualberta.cs.lonelytwitter.LonelyTwitterActivity;
 import ca.ualberta.cs.lonelytwitter.NormalTweetModel;
 
@@ -15,6 +18,7 @@ import ca.ualberta.cs.lonelytwitter.NormalTweetModel;
  * generate this class with new.. JUnit Test Case
  * set superclass to ActivityInstrumentationTestCase2
  */
+@SuppressLint("NewApi")
 public class LonelyTwitterActivityUITest extends
 		ActivityInstrumentationTestCase2<LonelyTwitterActivity> {
 
@@ -32,6 +36,33 @@ public class LonelyTwitterActivityUITest extends
 		activity = getActivity();
 
 		textInput = ((EditText) activity.findViewById(ca.ualberta.cs.lonelytwitter.R.id.body));
+	}
+	
+	public void testAddTweet() throws Throwable {
+		runTestOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				makeTweet("hi there #testing");
+				String text = textInput.getText().toString();
+				Intent intent = new Intent();
+				setActivityIntent(intent);
+				assertNotNull(activity);
+				
+				
+				
+				
+				
+				
+				assertEquals(true, tweet.equals());
+				assertEquals("IntentReaderActivity should get text from intent", 
+						"hi there #testing", text);
+				
+				
+				
+				
+			}
+		});
 	}
 	
 	/*
